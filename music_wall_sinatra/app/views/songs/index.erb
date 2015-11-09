@@ -1,0 +1,9 @@
+<h1>All Songs</h1>
+<hr/>
+
+<% @songs.each do |song| %>
+  <div class="song">
+    <h3>Title: <%= song.title %> <small>(submitted by: <%= song.author %>)</small></h3>
+    <p>Artist: <%= song.artist %></p>
+  </div>
+<% end %>
