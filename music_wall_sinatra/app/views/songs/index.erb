@@ -3,7 +3,7 @@
 <a href="/songs/new">Post a song here!</a>
 <% @songs.each do |song| %>
   <div class="song">
-    <h3>Title: <%= song.title %> <small>(submitted by: <%= song.author %>)</small></h3>
+    <h3><a href="/songs/<%= song.id %>"><%= song.title %></a> <small>(submitted by: <%= song.author %>)</small></h3>
     <p>Artist: <%= song.artist %></p>
   </div>
 <% end %>
