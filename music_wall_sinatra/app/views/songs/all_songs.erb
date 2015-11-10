@@ -1,0 +1,18 @@
+<!-- This page shows individual songs and can later be used to add song info -->
+<h1>All Songs</h1>
+<hr/>
+
+<% @songs.each do |song| %>
+  <div class="songs">
+    <h3><a href="/songs/<%= song.id %>"><%= song.title %></a></h3>
+  <p>
+      Artist: <%= song.artist %>
+  </p>
+  <p>
+    Submitted by: <%= song.author %>
+  </p>
+
+<% end %>
+
+
+

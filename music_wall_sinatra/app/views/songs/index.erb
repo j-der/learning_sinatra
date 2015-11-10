@@ -1,10 +1,24 @@
-<h1>All Songs</h1>
+<h1>Super Songs!!</h1>
 <hr/>
-<a href="/songs/new">Post a song here!</a>
-<% @songs.each do |song| %>
-  <div class="song">
-    <h3><a href="songs/<%= song.id %>"><%= song.title %></a> <small>(submitted by: <%= song.author %>)</small></h3>
-    <p>Artist: <%= song.artist %></p>
-    <p>Submitted on: <%= song.created_at %></p>
+
+<div class="landing_page">
+<p>Welcome to Super Songs! Your NUMBER ONE SPOT to post and rate groovy songs. Sign in below to get started. If you don't have an account yet, make one <a href="/sign_up">here</a>.</p>
+</div>
+
+<h3>Sign in</h3>
+<form method="post" action="/songs">
+  <div>
+    <label> Your username:</label>
+    <input type="text" name="username" placeholder="Username">
   </div>
-<% end %>
+  <div>
+    <label> Enter a password:</label>
+    <input type="password" name="title" placeholder="Password">
+  </div>
+  <div>
+    <input type="submit" value="Log in!">
+  </div>
+</form>
+
+
+<!-- <form action="/some_url" method="POST"> -->
