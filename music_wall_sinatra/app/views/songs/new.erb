@@ -1,17 +1,15 @@
 <h3>Post a groovy song below!</h3>
-
-<% if @song.errors.any? %>
-  <div>
-    <strong>Some issues with your song, please fix them:</strong>
-    <ul>
-      <% @song.errors.each do |song| %>
-        <li><%= song %></li>
-        <% end %>
-    </ul>
-  </div>
-<% end %>
-
-<form method="post" action="/songs">
+  <% if !@song.nil? %>
+    <% if @song.errors.any? %>
+      <div>
+        <strong>Some issues with your song, please fix them:</strong>
+        <ul>
+          <% @song.errors.each do |song| %>
+            <li><%= song %></li>
+            <% end %>
+        </ul>
+      </div>
+      <form method="post" action="/songs">
   <div>
     <label> Your name:</label>
     <input type="text" name="author" value="<%= @song.author %>">
@@ -28,3 +26,27 @@
     <input type="submit" value="Submit!">
   </div>
 </form>
+    <% end %>
+<% else %>
+
+<form method="post" action="/songs">
+  <div>
+    <label> Your name:</label>
+    <input type="text" name="author">
+  </div>
+  <div>
+    <label> Song title:</label>
+    <input type="text" name="title">
+  </div>
+  <div>
+    <label> Artist:</label>
+    <input type="text" name="artist">
+  </div>
+  <div>
+    <input type="submit" value="Submit!">
+  </div>
+</form>
+
+
+  <% end %>
+
