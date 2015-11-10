@@ -1,7 +1,7 @@
 <!-- This page shows individual songs and can later be used to add song info -->
 <h1>All Songs</h1>
 <hr/>
-
+<p>Add a new song</p>
 <% @songs.each do |song| %>
   <div class="songs">
     <h3><a href="/songs/<%= song.id %>"><%= song.title %></a></h3>

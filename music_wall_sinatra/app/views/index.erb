@@ -2,19 +2,23 @@
 <hr/>
 
 <div class="landing_page">
-<p>Welcome to Super Songs! Your NUMBER ONE SPOT to post and rate groovy songs. Sign in below to get started.</p>
+<p>Welcome to Super Songs! Your NUMBER ONE SPOT to post and rate groovy songs. Sign in below to get started. If you don't have an account yet, make one <a href="/sign_up">here</a>.</p>
 </div>
 
-<form method="post" action="/login">
+<h3>Sign in</h3>
+<form method="post" action="/songs">
   <div>
     <label> Your username:</label>
     <input type="text" name="username" placeholder="Username">
   </div>
   <div>
     <label> Enter a password:</label>
-    <input type="text" name="title" placeholder="Password">
+    <input type="password" name="password" placeholder="Password">
   </div>
   <div>
     <input type="submit" value="Log in!">
   </div>
 </form>
+
+
+<!-- <form action="/some_url" method="POST"> -->
